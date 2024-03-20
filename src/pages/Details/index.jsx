@@ -1,34 +1,48 @@
-import { Container, Links } from './styles'
+import { Container, Links, Content } from "./styles";
 
-import { Header } from '../../components/Header'
-import { Button } from '../../components/Button'
-import { Section } from '../../components/Section'
-import { Tag } from '../../components/Tag'
+import { Tag } from "../../components/Tag";
+import { Button } from "../../components/Button";
+import { Header } from "../../components/Header";
+import { Section } from "../../components/Section";
+import { ButtonText } from "../../components/ButtonText";
 
 export function Details() {
   return (
     <Container>
       <Header />
 
-      <Section title="Links úteis">
-        <Links>
-          <li>
-            <a href="#">https://rocketseat.com.br</a>
-          </li>
-          <li>
-            <a href="#">https://rocketseat.com.br</a>
-          </li>
-        </Links>
+      <main>
+        <Content>
+          <ButtonText title="Excluir nota" />
 
-        <Section title="Marcadores">
-        <Tag title="express"/>
-        <Tag title="nodejs"/>
-          
+          <h1>Introdução ao React</h1>
 
-        </Section>
-      </Section>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis ab sit, esse iure eius beatae tempore unde eveniet
+            deleniti cum et sed? Libero necessitatibus et totam ea vero
+            explicabo saepe.
+          </p>
 
-      <Button title="Voltar" />
+          <Section title="Links úteis">
+            <Links>
+              <li>
+                <a href="#">https://rocketseat.com.br</a>
+              </li>
+              <li>
+                <a href="#">https://rocketseat.com.br</a>
+              </li>
+            </Links>
+          </Section>
+
+          <Section title="Marcadores">
+            <Tag title="express" />
+            <Tag title="nodejs" />
+          </Section>
+
+          <Button title="Voltar" />
+        </Content>
+      </main>
     </Container>
-  )
+  );
 }

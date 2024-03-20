@@ -12,7 +12,7 @@ export function Header() {
 
         <div>
           <span>Bem-vindo</span>
-          <strong>Rodrigo Gonçalves</strong>
+          <strong>Warlley Lopes</strong>
         </div>
       </Profile>
 
