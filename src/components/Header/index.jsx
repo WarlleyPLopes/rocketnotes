@@ -3,9 +3,17 @@ import {useAuth} from '../../hooks/auth'
 import { Container, Profile, Logout } from './styles'
 import { api } from '../../services/api';
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
+import { useNavigate } from 'react-router-dom';
 
 export function Header() {
   const {singOut, user} = useAuth()
+  const navigate = useNavigate()
+  
+  function handleSingOut(){
+    navigate("/")
+    singOut()
+  }
+  
   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
 
   return (
@@ -22,7 +30,7 @@ export function Header() {
         </div>
       </Profile>
 
-      <Logout onClick={singOut}>
+      <Logout onClick={handleSingOut}>
         <RiShutDownLine />
       </Logout>
     </Container>
